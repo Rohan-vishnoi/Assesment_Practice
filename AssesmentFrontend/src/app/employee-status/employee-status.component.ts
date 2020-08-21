@@ -8,9 +8,10 @@ import { DataserviceService } from '../shared/dataservice.service';
 })
 export class EmployeeStatusComponent implements OnInit {
 
-  constructor(private service : DataserviceService) { }
+  constructor(public service : DataserviceService) { }
 
-  ngOnInit(): void {
+  ngOnInit() {
+    this.service.refreshlist();
   }
 
 }

@@ -6,6 +6,8 @@ import { EmployeeStatusComponent } from './employee-status/employee-status.compo
 import { AddEmployeestatusComponent } from './add-employeestatus/add-employeestatus.component';
 import { DataserviceService } from './shared/dataservice.service'
 import { HttpClientModule} from "@angular/common/http"
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ToastrModule } from 'ngx-toastr';
 @NgModule({
   declarations: [
     AppComponent,
@@ -15,7 +17,9 @@ import { HttpClientModule} from "@angular/common/http"
   imports: [
     BrowserModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule,
+    ToastrModule.forRoot()
   ],
   providers: [DataserviceService],
   bootstrap: [AppComponent]

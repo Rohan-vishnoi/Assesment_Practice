@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { DataserviceService } from '../shared/dataservice.service';
 import { NgForm } from '@angular/forms';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-add-employeestatus',
@@ -9,7 +10,9 @@ import { NgForm } from '@angular/forms';
 })
 export class AddEmployeestatusComponent implements OnInit {
 
-  constructor(public service : DataserviceService) { }
+   constructor(public service : DataserviceService, public toastr : ToastrService) {
+    // role : Number[] = ['1','2']
+   }
 
   ngOnInit() {
     this.resetForm();
@@ -33,8 +36,10 @@ export class AddEmployeestatusComponent implements OnInit {
 
     insertrecord(form : NgForm){
       this.service.postemployeedetail(form.value).subscribe(res => {
+        this.toastr.success('Inserted Successfully' , 'EMP. REGISTER')
         this.resetForm(form)
       })
     }
 
 }
+ 

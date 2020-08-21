@@ -1,24 +1,33 @@
-<form #form="ngForm" (submit)="onSubmit(form)" autocomplete="off">
+<!-- Image and text -->
+
+  <form #form="ngForm" (submit)="onSubmit(form)" autocomplete="off">
     <div class="form-row">
-    <div class="form-group col-md-6">
-        <label>FULLNAME</label>
-        <input name="FullName" #FullName="ngModel" [(ngModel)]="service.formData.FullName" class="form-control" required>
+    <div class="form-group col-md-12">
+        <input name="FullName" placeholder="Name" #FullName="ngModel" [(ngModel)]="service.formData.FullName" class="form-control" required>
         <div class="validation-error" *ngIf="FullName.invalid && FullName.touched">This field is required</div>
     </div>
-    <div class="form-group col-md-6">
-        <label>EMAIL</label>
-        <input name="Email" #Email="ngModel" [(ngModel)]="service.formData.Email" class="form-control" required>
+    <div class="form-group col-md-12">
+        <input name="Email" placeholder="Email" #Email="ngModel" [(ngModel)]="service.formData.Email" class="form-control" required>
     </div>
+<!-- 
     <div class="form-group col-md-6 roleclass">
         <label>ROLE TYPE</label>
         <input name="RollCode" #RollCode="ngModel" [(ngModel)]="service.formData.RollCode" class="form-control">
+    </div> -->
+    <div class="form-group col-md-12">
+        <label class="btn">
+            <input type="radio" name="RollCode" #RollCode="ngModel" [(ngModel)]="service.formData.RollCode" [value] = "1"  autocomplete="off"> Admin
+          </label>
+          <label class="btn">
+            <input type="radio" name="RollCode" #RollCode="ngModel" [(ngModel)]="service.formData.RollCode" [value] = "2"  autocomplete="off"> Executive
+          </label>
     </div>
+    
     <div class="form-group col-md-6 roleclass">
-        <label>STATUS</label>
-        <input name="Status" #Status="ngModel" [(ngModel)]="service.formData.Status" class="form-control">
+        <input name="Status" placeholder="Status" #Status="ngModel" [(ngModel)]="service.formData.Status" class="form-control">
     </div>
 </div>
     <div class="form-group Submitbtn">
-        <button type="submit" [disabled] = "form.invalid" class="btn btn-lg btn-block">SUBMIT</button>
+        <button type="submit" [disabled] = "form.invalid" class="btn btn-lg btn-block addusermodal">ADD USER</button>
     </div>
 </form>

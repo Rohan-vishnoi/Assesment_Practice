@@ -1,19 +1,44 @@
 /* You can add global styles to this file, and also import other style files */
 button.btn.btn-lg.btn-block {
     color: black;
-    background-color: darkgray;
+    background-color: #f79f1c;
 }
 .form-group>input{
     font-weight: bolder;
 }
+.modalbutton {
+    padding-top: 15px;
+    padding-right: 15px;;
+    padding-bottom: 15px;
+    float: right;
+}
+button.btn.btn-primary.adduser {
+    background-color: #ff8834;
+    border-color: #ff8834;
+}
 .form-group>label{
     font-weight: lighter;
+}
+.navbar-light .navbar-brand {
+    color: rgb(255 255 255 / 90%) !important;
 }
 
 button[type="submit"]{
     background-color: #67dfd4;
     color: #fff;
 
+}
+button.btn.btn-lg.btn-block.addusermodal {
+    color: #ffffff;
+    background-color: #ff8834;
+}
+.tablecontainer {
+    background-color: #e8eaef;
+    display: block;
+    height: 91vh;
+    scroll-behavior: auto;
+    -webkit-border-after: 3px #cdcfd4 solid;
+    border-block-end: 3px #cdcfd4 solid;
 }
 .jumbotron{
     background-color: #fff;
@@ -32,4 +57,4 @@ div.validation-error{
     margin-top: .25rem;
     font-size: 80%;
     color: #dc3545;
-}
+}   
