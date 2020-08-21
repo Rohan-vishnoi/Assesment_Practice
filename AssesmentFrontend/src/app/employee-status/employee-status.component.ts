@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DataserviceService } from '../shared/dataservice.service';
 
 @Component({
   selector: 'app-employee-status',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EmployeeStatusComponent implements OnInit {
 
-  constructor() { }
+  constructor(private service : DataserviceService) { }
 
   ngOnInit(): void {
   }

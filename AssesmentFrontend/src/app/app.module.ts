@@ -1,10 +1,10 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { FormsModule }   from '@angular/forms';
 import { AppComponent } from './app.component';
 import { EmployeeStatusComponent } from './employee-status/employee-status.component';
 import { AddEmployeestatusComponent } from './add-employeestatus/add-employeestatus.component';
-
+import { DataserviceService } from './shared/dataservice.service'
 @NgModule({
   declarations: [
     AppComponent,
@@ -12,9 +12,10 @@ import { AddEmployeestatusComponent } from './add-employeestatus/add-employeesta
     AddEmployeestatusComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [DataserviceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

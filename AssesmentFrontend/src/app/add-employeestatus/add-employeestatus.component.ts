@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { DataserviceService } from '../shared/dataservice.service';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-add-employeestatus',
@@ -7,9 +9,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AddEmployeestatusComponent implements OnInit {
 
-  constructor() { }
+  constructor(public service : DataserviceService) { }
 
   ngOnInit(): void {
+    this.resetForm();
   }
+
+  resetForm(form? : NgForm) {
+    if(form != null)
+    form.resetForm();
+    this.service.formData = {
+      EmployeeID :null,
+      FullName : '',
+      RollCode :null,
+      Status : null,   
+      Email :''
+    }
+    }
 
 }
