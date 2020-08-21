@@ -7,16 +7,16 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace AssignmentWebapi.Models
+namespace AssignmentWebapi
 {
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class DBEmployee : DbContext
+    public partial class Employee_CRUDEntities : DbContext
     {
-        public DBEmployee()
-            : base("name=DBEmployee")
+        public Employee_CRUDEntities()
+            : base("name=Employee_CRUDEntities")
         {
         }
     

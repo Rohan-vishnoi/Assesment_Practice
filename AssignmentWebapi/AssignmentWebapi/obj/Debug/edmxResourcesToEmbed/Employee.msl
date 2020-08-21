@@ -1,14 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-  <EntityContainerMapping StorageEntityContainer="Employee_CRUDModelStoreContainer" CdmEntityContainer="DBEmployee">
+  <EntityContainerMapping StorageEntityContainer="Employee_CRUDModelStoreContainer" CdmEntityContainer="Employee_CRUDEntities">
     <EntitySetMapping Name="Employees">
       <EntityTypeMapping TypeName="Employee_CRUDModel.Employee">
         <MappingFragment StoreEntitySet="Employee">
-          <ScalarProperty Name="Email" ColumnName="Email" />
           <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
           <ScalarProperty Name="FullName" ColumnName="FullName" />
           <ScalarProperty Name="RollCode" ColumnName="RollCode" />
           <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

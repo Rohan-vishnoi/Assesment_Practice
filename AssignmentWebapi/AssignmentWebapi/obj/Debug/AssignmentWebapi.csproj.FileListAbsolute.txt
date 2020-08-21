@@ -86,4 +86,6 @@ C:\Users\aviro\OneDrive\Documents\GitHub\Assesment_Practice\AssignmentWebapi\Ass
 C:\Users\aviro\OneDrive\Documents\GitHub\Assesment_Practice\AssignmentWebapi\AssignmentWebapi\obj\Debug\AssignmentWebapi.csproj.CopyComplete
 C:\Users\aviro\OneDrive\Documents\GitHub\Assesment_Practice\AssignmentWebapi\AssignmentWebapi\obj\Debug\AssignmentWebapi.dll
 C:\Users\aviro\OneDrive\Documents\GitHub\Assesment_Practice\AssignmentWebapi\AssignmentWebapi\obj\Debug\AssignmentWebapi.pdb
-C:\Users\aviro\OneDrive\Documents\GitHub\Assesment_Practice\AssignmentWebapi\AssignmentWebapi\obj\Debug\AssignmentWebapi.csprojAssemblyReference.cache
+C:\Users\aviro\OneDrive\Documents\GitHub\Assesment_Practice\AssignmentWebapi\AssignmentWebapi\bin\System.Web.Cors.dll
+C:\Users\aviro\OneDrive\Documents\GitHub\Assesment_Practice\AssignmentWebapi\AssignmentWebapi\bin\System.Web.Http.Cors.dll
+C:\Users\aviro\OneDrive\Documents\GitHub\Assesment_Practice\AssignmentWebapi\AssignmentWebapi\bin\System.Web.Http.Cors.xml

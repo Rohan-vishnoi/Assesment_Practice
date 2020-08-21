@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { EmployeeStatusComponent } from './employee-status/employee-status.component';
 import { AddEmployeestatusComponent } from './add-employeestatus/add-employeestatus.component';
 import { DataserviceService } from './shared/dataservice.service'
+import { HttpClientModule} from "@angular/common/http"
 @NgModule({
   declarations: [
     AppComponent,
@@ -13,7 +14,8 @@ import { DataserviceService } from './shared/dataservice.service'
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [DataserviceService],
   bootstrap: [AppComponent]

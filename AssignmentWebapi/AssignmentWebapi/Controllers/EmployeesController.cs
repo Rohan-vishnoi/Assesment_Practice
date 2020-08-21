@@ -8,38 +8,42 @@ using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 using System.Web.Http.Description;
-using AssignmentWebapi.Models;
+using AssignmentWebapi;
 
 namespace AssignmentWebapi.Controllers
 {
-    public class EmployeeController : ApiController
+    public class EmployeesController : ApiController
     {
-        private DBEmployee db = new DBEmployee();
-         
-        // GET: api/Employee
+        private Employee_CRUDEntities db = new Employee_CRUDEntities();
+
+        // GET: api/Employees
         public IQueryable<Employee> GetEmployees()
         {
             return db.Employees;
         }
 
-        //// GET: api/Employee/5
-        //[ResponseType(typeof(Employee))]
-        //public IHttpActionResult GetEmployee(int id)
-        //{
-        //    Employee employee = db.Employees.Find(id);
-        //    if (employee == null)
-        //    {
-        //        return NotFound();
-        //    }
+        // GET: api/Employees/5
+        [ResponseType(typeof(Employee))]
+        public IHttpActionResult GetEmployee(int id)
+        {
+            Employee employee = db.Employees.Find(id);
+            if (employee == null)
+            {
+                return NotFound();
+            }
 
-        //    return Ok(employee);
-        //}
+            return Ok(employee);
+        }
 
-        // PUT: api/Employee/5
+        // PUT: api/Employees/5
         [ResponseType(typeof(void))]
         public IHttpActionResult PutEmployee(int id, Employee employee)
         {
-            
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
             if (id != employee.EmployeeID)
             {
                 return BadRequest();
@@ -66,18 +70,18 @@ namespace AssignmentWebapi.Controllers
             return StatusCode(HttpStatusCode.NoContent);
         }
 
-        // POST: api/Employee
+        // POST: api/Employees
         [ResponseType(typeof(Employee))]
         public IHttpActionResult PostEmployee(Employee employee)
         {
-
+            
             db.Employees.Add(employee);
             db.SaveChanges();
 
             return CreatedAtRoute("DefaultApi", new { id = employee.EmployeeID }, employee);
         }
 
-        // DELETE: api/Employee/5
+        // DELETE: api/Employees/5
         [ResponseType(typeof(Employee))]
         public IHttpActionResult DeleteEmployee(int id)
         {

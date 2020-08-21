@@ -11,7 +11,7 @@ export class AddEmployeestatusComponent implements OnInit {
 
   constructor(public service : DataserviceService) { }
 
-  ngOnInit(): void {
+  ngOnInit() {
     this.resetForm();
   }
 
@@ -25,6 +25,16 @@ export class AddEmployeestatusComponent implements OnInit {
       Status : null,   
       Email :''
     }
+    }
+
+    onSubmit(form : NgForm) {
+      this.insertrecord(form);
+    }
+
+    insertrecord(form : NgForm){
+      this.service.postemployeedetail(form.value).subscribe(res => {
+        this.resetForm(form)
+      })
     }
 
 }
