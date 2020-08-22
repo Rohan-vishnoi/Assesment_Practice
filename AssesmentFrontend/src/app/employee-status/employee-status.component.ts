@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { DataserviceService } from '../shared/dataservice.service';
 import { Detailemp } from '../shared/detailemp.model';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-employee-status',
@@ -9,7 +10,7 @@ import { Detailemp } from '../shared/detailemp.model';
 })
 export class EmployeeStatusComponent implements OnInit {
 
-  constructor(public service : DataserviceService) { }
+  constructor(public service : DataserviceService ,  public toastr : ToastrService) { }
 
   ngOnInit() {
     this.service.refreshlist();
@@ -17,7 +18,16 @@ export class EmployeeStatusComponent implements OnInit {
 
   showdetails(emp : Detailemp)
   {
+    debugger;
     this.service.formData = Object.assign({},emp);
+  }
+
+  Ondelete(id : number){
+    this.service.deleteEmployeedetail(id).subscribe(res => {
+      debugger;
+      this.service.refreshlist();
+      this.toastr.warning('Delated Succesfully', 'EMP. RESGISTER')
+    })
   }
 
 }

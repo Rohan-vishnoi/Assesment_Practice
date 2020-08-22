@@ -55,6 +55,7 @@
          <td *ngIf="emp.Status === 2"><img src="..\assets\Images\ico_pending.svg" >&nbsp;Pending</td>
          <td *ngIf="emp.Status === 3"><img src="..\assets\Images\ico_inactive.svg" >&nbsp;Inactive</td>
          <td (click)="showdetails(emp)" data-toggle="modal" data-target="#exampleModalScrollable"><img src="..\assets\Images\ico_edit.svg" ></td>
+         <td  (click)="Ondelete(emp.EmployeeID)"><button type="button" class="btn btn-danger">DELETE</button></td>
      </tr>
  </table>
 </div>
@@ -68,7 +69,7 @@
     <div class="modal-dialog modal-dialog-centered" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalScrollableTitle">Add user</h5>
+          <h5 class="modal-title" id="exampleModalScrollableTitle">User Details</h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
