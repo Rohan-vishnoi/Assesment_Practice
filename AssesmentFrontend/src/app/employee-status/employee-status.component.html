@@ -1,14 +1,38 @@
 <div class="maincontainer">
-
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
-    <a class="navbar-brand" href="#">
-      <img src="/docs/4.0/assets/brand/bootstrap-solid.svg" width="30" height="30" class="d-inline-block align-top" alt="">
-      Bootstrap
-    </a>
-  </nav>
-</div> <!-- Button trigger modal -->
-
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+        <a class="navbar-brand " href="#">
+            <img  src="..\assets\Images\Logo.svg" width="30" height="30" class="d-inline-block align-top" alt="">
+           
+          </a>
+         <a class="navbar-brand headerlogo" href="#">
+        <img  src="..\assets\Images\ico_dashboard.svg" width="30" height="30" class="d-inline-block align-top" alt="">
+        Dashboard
+      </a>
+        <a class="navbar-brand headerlogo" href="#">
+          <img  src="..\assets\Images\ico_usersheader.svg" width="30" height="30" class="d-inline-block align-top" alt="">
+          Users
+        </a>
+        <a class="navbar-brand headerlogo" href="#">
+            <img  src="..\assets\Images\ico_sessionmanager.svg" width="30" height="30" class="d-inline-block align-top" alt="">
+            SessionManager
+          </a>
+          <div class="right">
+          <a class="navbar-brand headerlogoright" href="#">
+            <img  src="..\assets\Images\ico_notification.svg" width="30" height="30" class="d-inline-block align-top" alt="">
+            
+          </a>
+          <a class="navbar-brand headerlogoright" href="#">
+            <img  src="..\assets\Images\ico_user.svg" width="30" height="30" class="d-inline-block align-top" alt="">
+            JohnSmith
+          </a>
+          <a class="navbar-brand headerlogoright" href="#">
+            <img  src="..\assets\Images\ico_downarrow.svg" width="30" height="30" class="d-inline-block align-top" alt="">
+          </a>
+        </div>
+      </nav>
+    </div> 
 <div class="tablecontainer">
+        <img class="userimage" src="..\assets\Images\ico_users.svg" >  Users
     <div class="modalbutton">
     <button type="button" class="btn btn-primary adduser" data-toggle="modal" data-target="#exampleModalScrollable">
         ADD USER
@@ -27,8 +51,10 @@
          <td>{{emp.Email}}</td>
          <td *ngIf="emp.RollCode === 1">Admin</td>
          <td *ngIf="emp.RollCode === 2">Executive</td>
-         <td>{{emp.Status}}</td>
-         <td><button class="btn btn-sm btn-outline-success">X</button></td>
+         <td *ngIf="emp.Status === 1"><img src="..\assets\Images\ico_active.svg" >&nbsp;Active</td>
+         <td *ngIf="emp.Status === 2"><img src="..\assets\Images\ico_pending.svg" >&nbsp;Pending</td>
+         <td *ngIf="emp.Status === 3"><img src="..\assets\Images\ico_inactive.svg" >&nbsp;Inactive</td>
+         <td><img src="..\assets\Images\ico_edit.svg" ></td>
      </tr>
  </table>
  

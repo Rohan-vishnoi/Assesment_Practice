@@ -28,17 +28,38 @@ button[type="submit"]{
     color: #fff;
 
 }
+img.userimage {
+    vertical-align: middle;
+    padding-top: 15px;
+    padding-left: 15px;
+}
+a.navbar-brand.headerlogo {
+    width: fit-content;
+    padding-right: 26px;
+}
+.right
+{
+    margin-left: auto;
+    float: right !important;
+}
+
+a.navbar-brand.headerlogoright {
+    width: fit-content;
+}
 button.btn.btn-lg.btn-block.addusermodal {
     color: #ffffff;
     background-color: #ff8834;
 }
+img.d-inline-block.align-top {
+    width: inherit;
+}
 .tablecontainer {
-    background-color: #e8eaef;
+    background-color: #fdfdfd;
     display: block;
-    height: 91vh;
+    height: 80vh;
+    border-style: ridge;
     scroll-behavior: auto;
     -webkit-border-after: 3px #cdcfd4 solid;
-    border-block-end: 3px #cdcfd4 solid;
 }
 .jumbotron{
     background-color: #fff;
