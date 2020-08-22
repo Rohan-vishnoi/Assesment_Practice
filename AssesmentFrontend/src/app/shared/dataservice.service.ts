@@ -26,4 +26,9 @@ export class DataserviceService {
    return this.http.put(this.rootURL + '/Employees/' + formData.EmployeeID,formData);
   }
 
+  deleteEmployeedetail(id : number) {
+    debugger;
+    return this.http.delete(this.rootURL + '/Employees/' + id);
+  }
+
 }

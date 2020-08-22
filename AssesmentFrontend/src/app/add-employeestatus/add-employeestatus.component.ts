@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { DataserviceService } from '../shared/dataservice.service';
 import { NgForm } from '@angular/forms';
 import { ToastrService } from 'ngx-toastr';
+import { formatCurrency } from '@angular/common';
 declare var $:any;
 @Component({
   selector: 'app-add-employeestatus',
@@ -40,7 +41,6 @@ export class AddEmployeestatusComponent implements OnInit {
       this.insertrecord(form);
       } else {
         this.updaterecord(form)
-
       }
     }
 
@@ -55,10 +55,19 @@ export class AddEmployeestatusComponent implements OnInit {
     updaterecord(form : NgForm){
       this.service.putemployeedetail(form.value).subscribe(res => {
         this.service.refreshlist();
-        this.toastr.warning('Updated Successfully' , 'EMP. REGISTER')
+        this.toastr.info('Updated Successfully' , 'EMP. REGISTER')
         this.resetForm(form)
       })
     }
+
+    Ondelete(id : number){
+      this.service.deleteEmployeedetail(id).subscribe(res => {
+        debugger;
+        this.service.refreshlist();
+        this.toastr.warning('Delated Succesfully', 'EMP. RESGISTER')
+      })
+    }
+    
 
 }
  
