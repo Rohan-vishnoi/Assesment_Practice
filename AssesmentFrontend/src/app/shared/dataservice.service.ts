@@ -20,4 +20,10 @@ export class DataserviceService {
   refreshlist(){
     return this.http.get(this.rootURL+ '/Employees').toPromise().then(res => this.list = res as Detailemp[]);
   }
+
+  putemployeedetail(formData : Detailemp) 
+  {
+   return this.http.put(this.rootURL + '/Employees/' + formData.EmployeeID,formData);
+  }
+
 }

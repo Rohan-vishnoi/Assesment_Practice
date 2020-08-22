@@ -9,6 +9,7 @@
     <Property Name="RollCode" Type="int" Nullable="false" />
     <Property Name="Status" Type="int" Nullable="false" />
     <Property Name="Email" Type="varchar" MaxLength="255" />
+    <Property Name="MobileNumber" Type="int" />
   </EntityType>
   <EntityContainer Name="Employee_CRUDModelStoreContainer">
     <EntitySet Name="Employee" EntityType="Self.Employee" Schema="dbo" store:Type="Tables" />

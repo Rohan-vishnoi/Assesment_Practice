@@ -42,7 +42,17 @@ a.navbar-brand.headerlogo {
     margin-left: auto;
     float: right !important;
 }
+.input-group.col-md-4.roleclass {
+    padding-bottom: 16px;
+}
 
+a.textprop {
+    padding: inherit;
+    font-size: x-large;
+}
+input.form-control.ng-pristine.ng-valid.ng-touched {
+    border-radius: 3px;
+}
 a.navbar-brand.headerlogoright {
     width: fit-content;
 }
@@ -56,11 +66,11 @@ img.d-inline-block.align-top {
 .tablecontainer {
     background-color: #fdfdfd;
     display: block;
-    height: 80vh;
+    height: 100%;
     border-style: ridge;
-    scroll-behavior: auto;
     -webkit-border-after: 3px #cdcfd4 solid;
 }
+
 .jumbotron{
     background-color: #fff;
     padding-top: 32px;

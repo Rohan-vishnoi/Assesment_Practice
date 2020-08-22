@@ -8,7 +8,7 @@
             <g id="Logo" transform="translate(32.000000, 20.000000)">
                 <rect id="Rectangle" stroke="#FFFFFF" stroke-width="2" fill-rule="nonzero" x="5" y="5.21320344" width="20" height="20"></rect>
                 <path d="M0,30.2132034 L30,0.213203436" id="Path" stroke="#FFFFFF" stroke-width="2" fill-rule="nonzero"></path>
-                <text id="locusnine" font-family="Cabin-Regular, Cabin" font-size="21" font-weight="normal" line-spacing="24" fill="#FFFFFF">
+                <text id="locusnine" font-family="Cabin-Regular, Cabin" font-size="25" font-weight="normal" line-spacing="24" fill="#FFFFFF">
                     <tspan x="30" y="26">locusnine</tspan>
                 </text>
             </g>

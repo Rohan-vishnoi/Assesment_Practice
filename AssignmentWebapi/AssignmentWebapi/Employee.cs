@@ -19,5 +19,6 @@ namespace AssignmentWebapi
         public int RollCode { get; set; }
         public int Status { get; set; }
         public string Email { get; set; }
+        public Nullable<int> MobileNumber { get; set; }
     }
 }

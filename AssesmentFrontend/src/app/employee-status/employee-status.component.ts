@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DataserviceService } from '../shared/dataservice.service';
+import { Detailemp } from '../shared/detailemp.model';
 
 @Component({
   selector: 'app-employee-status',
@@ -12,6 +13,11 @@ export class EmployeeStatusComponent implements OnInit {
 
   ngOnInit() {
     this.service.refreshlist();
+  }
+
+  showdetails(emp : Detailemp)
+  {
+    this.service.formData = Object.assign({},emp);
   }
 
 }

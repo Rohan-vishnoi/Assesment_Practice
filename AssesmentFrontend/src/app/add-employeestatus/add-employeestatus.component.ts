@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { DataserviceService } from '../shared/dataservice.service';
 import { NgForm } from '@angular/forms';
 import { ToastrService } from 'ngx-toastr';
-
+declare var $:any;
 @Component({
   selector: 'app-add-employeestatus',
   templateUrl: './add-employeestatus.component.html',
@@ -16,7 +16,10 @@ export class AddEmployeestatusComponent implements OnInit {
 
   ngOnInit() {
     this.resetForm();
+    $('[data-toggle="popover"]').popover();
   }
+
+ 
 
   resetForm(form? : NgForm) {
     if(form != null)
@@ -26,17 +29,33 @@ export class AddEmployeestatusComponent implements OnInit {
       FullName : '',
       RollCode :null,
       Status : null,   
-      Email :''
+      Email :'',
+      MobileNumber:null
     }
     }
 
     onSubmit(form : NgForm) {
+      debugger;
+      if(form.value.EmployeeID == null ) {
       this.insertrecord(form);
+      } else {
+        this.updaterecord(form)
+
+      }
     }
 
     insertrecord(form : NgForm){
       this.service.postemployeedetail(form.value).subscribe(res => {
+        this.service.refreshlist();
         this.toastr.success('Inserted Successfully' , 'EMP. REGISTER')
+        this.resetForm(form)
+      })
+    }
+    
+    updaterecord(form : NgForm){
+      this.service.putemployeedetail(form.value).subscribe(res => {
+        this.service.refreshlist();
+        this.toastr.warning('Updated Successfully' , 'EMP. REGISTER')
         this.resetForm(form)
       })
     }

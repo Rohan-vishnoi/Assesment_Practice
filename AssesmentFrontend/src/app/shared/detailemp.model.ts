@@ -5,4 +5,5 @@ export class Detailemp {
      RollCode :number
      Status : number   
      Email :string
+     MobileNumber :number
 }

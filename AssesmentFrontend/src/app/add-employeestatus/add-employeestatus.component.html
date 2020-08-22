@@ -1,6 +1,7 @@
 <!-- Image and text -->
 
   <form #form="ngForm" (submit)="onSubmit(form)" autocomplete="off">
+      <input type="hidden" name="EmployeeID"  #EmployeeID="ngModel" [(ngModel)]="service.formData.EmployeeID">
     <div class="form-row">
     <div class="form-group col-md-12">
         <input name="FullName" placeholder="Name" #FullName="ngModel" [(ngModel)]="service.formData.FullName" class="form-control" required>
@@ -23,9 +24,14 @@
           </label>
     </div>
     
-    <div class="form-group col-md-6 roleclass">
-        <input name="Status" placeholder="Status" #Status="ngModel" [(ngModel)]="service.formData.Status" class="form-control">
+    <div class="input-group col-md-4 roleclass">
+        <input name="Status" placeholder="Status" #Status="ngModel" [(ngModel)]="service.formData.Status" class="form-control" >
+        <a href="#" data-toggle="popover" title="Insert Status Codes !" class="textprop" data-html="true" data-content="  1 for Active <br/> 2 for Pending  <br/> 3 for Inactive">?</a>      
     </div>
+    <div class="form-group col-md-8">
+        <input name="MobileNumber" placeholder="MobileNumber" #Status="ngModel" [(ngModel)]="service.formData.MobileNumber" class="form-control" >      
+    </div>
+ 
 </div>
     <div class="form-group Submitbtn">
         <button type="submit" [disabled] = "form.invalid" class="btn btn-lg btn-block addusermodal">ADD USER</button>

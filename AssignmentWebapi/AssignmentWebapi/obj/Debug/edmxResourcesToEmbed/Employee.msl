@@ -4,6 +4,7 @@
     <EntitySetMapping Name="Employees">
       <EntityTypeMapping TypeName="Employee_CRUDModel.Employee">
         <MappingFragment StoreEntitySet="Employee">
+          <ScalarProperty Name="MobileNumber" ColumnName="MobileNumber" />
           <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
           <ScalarProperty Name="FullName" ColumnName="FullName" />
           <ScalarProperty Name="RollCode" ColumnName="RollCode" />

@@ -38,10 +38,10 @@
         ADD USER
     </button>
 </div>
-       
- <table class="table table-hover">
+      <div class="tablescroll"> 
+ <table class="table table-hover ">
      <tr>
-        <th>FullName</th>
+        <th>Name&nbsp;<img src="..\assets\Images\ico_sorting.svg" ></th>
         <th>Email</th>
         <th>RollCode</th>
         <th>Status</th>
@@ -54,9 +54,10 @@
          <td *ngIf="emp.Status === 1"><img src="..\assets\Images\ico_active.svg" >&nbsp;Active</td>
          <td *ngIf="emp.Status === 2"><img src="..\assets\Images\ico_pending.svg" >&nbsp;Pending</td>
          <td *ngIf="emp.Status === 3"><img src="..\assets\Images\ico_inactive.svg" >&nbsp;Inactive</td>
-         <td><img src="..\assets\Images\ico_edit.svg" ></td>
+         <td (click)="showdetails(emp)" data-toggle="modal" data-target="#exampleModalScrollable"><img src="..\assets\Images\ico_edit.svg" ></td>
      </tr>
  </table>
+</div>
  
 </div>
 
@@ -79,3 +80,5 @@
       </div>
     </div>
   </div>
+
+
